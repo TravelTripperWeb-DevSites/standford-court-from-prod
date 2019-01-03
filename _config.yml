@@ -1,71 +1,59 @@
-# Site settings
-url: "https://www.stanfordcourt.com"
+---
+url: https://www.stanfordcourt.com
 booking_widget_url: https://stanfordcourt.reztrip.com/mobile
-
-# Language settings
-default_lang: 'en'
-languages: ['en']
-
-# Build settings
+default_lang: en
+languages:
+- en
+- it
 permalink: pretty
-
 markdown: kramdown
 sass:
   sass_dir: _sass
   style: compressed
-
 data_paginate:
   per_page: 6
-  data: 'blog'
-  path: 'blog/page:num'
-  #paginate_path: "/page:num/"
-  pagination_template: 'blog/index.html'
-  sort_field: 'date'
+  data: blog
+  path: blog/page:num
+  pagination_template: blog/index.html
+  sort_field: date
   sort_reverse: true
-
 page_gen:
-  - data: 'blog'
-    template: 'blog-details'
-    dir: 'blog'
-  # - data: 'category'
-  #   template: 'category'
-  #   dir: 'categories'
-  - data: 'events'
-    template: 'event-details'
-    dir: 'events'
-  - data: 'promos'
-    template: 'promo-details'
-    dir: 'promos'
-
-# File Handling
+- data: blog
+  template: blog-details
+  dir: blog
+- data: events
+  template: event-details
+  dir: events
+- data: promos
+  template: promo-details
+  dir: promos
 include:
-  - _pages
-
+- _pages
 exclude:
-  - "*.sublime-project"
-  - "*.sublime-workspace"
-  - vendor
-  - .asset-cache
-  - .bundle
-  - .jekyll-assets-cache
-  - .sass-cache
-  - js/plugins
-  - js/_main.js
-  - js/vendor
-  - Capfile
-  - CHANGELOG
-  - config
-  - Gemfile
-  - Gruntfile.js
-  - gulpfile.js
-  - LICENSE
-  - log
-  - media.json
-  - models.json
-  - node_modules
-  - old_media.json
-  - package.json
-  - Rakefile
-  - README
-  - sitemap.json
-  - tmp
+- "*.sublime-project"
+- "*.sublime-workspace"
+- vendor
+- ".asset-cache"
+- ".bundle"
+- ".jekyll-assets-cache"
+- ".sass-cache"
+- js/plugins
+- js/_main.js
+- js/vendor
+- Capfile
+- CHANGELOG
+- config
+- Gemfile
+- Gruntfile.js
+- gulpfile.js
+- LICENSE
+- log
+- media.json
+- models.json
+- node_modules
+- old_media.json
+- package.json
+- Rakefile
+- README
+- sitemap.json
+- tmp
